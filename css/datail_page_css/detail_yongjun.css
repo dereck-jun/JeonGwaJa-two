@@ -1,0 +1,55 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+/* 전역 스타일 */
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content-container {
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.job-title {
+    margin-top: 16px;
+}
+
+.job-title > a {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+
+.profile-image>img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.introduction {
+    margin-top: 20px;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
