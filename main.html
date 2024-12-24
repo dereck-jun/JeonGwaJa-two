@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10조 자기소개</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    .header, .footer {
+      text-align: center;
+      background-color: #fff;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .content-section {
+      margin-bottom: 20px;
+    }
+    .team-intro, .guestbook {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      display: none; /* 기본 : 숨김 */
+    }
+    .team-intro.active, .guestbook.active {
+      display: block; /* 활성화된 부분만 보임 */
+    }
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .profile.left {
+      flex-direction: row;
+    }
+    .profile.right {
+      flex-direction: row-reverse;
+    }
+    .profile img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin: 0 15px;
+    }
+    .profile-info h5 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+    .profile-info p {
+      margin: 0;
+    }
+    .guestbook form {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .guestbook textarea {
+      width: 100%;
+      resize: none;
+    }
+    .comment-list {
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 5px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    .buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .buttons button {
+      margin: 0 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- 헤더 -->
+  <div class="header">
+    <h1>전과자 둘</h1>
+  </div>
+
+  <!-- 버튼 -->
+  <div class="buttons">
+    <button id="teamButton" class="btn btn-primary">팀원 소개</button>
+    <button id="guestbookButton" class="btn btn-secondary">방명록</button>
+  </div>
+
+  <!-- 메인 -->
+  <div class="container">
+    <div class="content-section">
+      <!-- 팀원 소개 -->
+      <div class="team-intro" id="teamIntro">
+        <div class="profile left">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>박용준</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 : 
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+        <div class="profile right">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>민혜원</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 : 
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+        <div class="profile left">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>한윤희</h5>
+            <p>
+              나이 : 23세<br>
+              거주지 : 원주시<br>
+              한마디 : 화이팅!
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+        <div class="profile right">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>박성호</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 : 
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+        <div class="profile left">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>박상현</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 : 
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 방명록 -->
+      <div class="guestbook" id="guestbook">
+        <form>
+          <input type="text" class="form-control" placeholder="ID">
+          <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
+          <button class="btn btn-sm btn-success">Send</button>
+        </form>
+        <div class="comment-list">
+          <p><strong>게스트:</strong> 내용.</p>
+          <p><strong>게스트:</strong> 내용.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 아래 -->
+  <div class="footer">
+    <p>&copy; 2024/12/24 백엔드 부트캠프 5기 10조 자기소개</p>
+  </div>
+
+  <script>
+    const teamButton = document.getElementById("teamButton");
+    const guestbookButton = document.getElementById("guestbookButton");
+    const teamIntro = document.getElementById("teamIntro");
+    const guestbook = document.getElementById("guestbook");
+
+    teamButton.addEventListener("click", () => {
+      teamIntro.classList.add("active");
+      guestbook.classList.remove("active");
+    });
+
+    guestbookButton.addEventListener("click", () => {
+      guestbook.classList.add("active");
+      teamIntro.classList.remove("active");
+    });
+  </script>
+</body>
+</html>
