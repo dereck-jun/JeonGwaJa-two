@@ -1,0 +1,92 @@
+body {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.header,
+.footer {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    margin-bottom: 20px;
+}
+
+.team-intro,
+.guestbook {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: none;
+    /* 기본 : 숨김 */
+}
+
+.team-intro.active,
+.guestbook.active {
+    display: block;
+    /* 활성화된 부분만 보임 */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile.left {
+    flex-direction: row;
+}
+
+.profile.right {
+    flex-direction: row-reverse;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin: 0 15px;
+}
+
+.profile-info h5 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.profile-info p {
+    margin: 0;
+}
+
+.guestbook form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.guestbook textarea {
+    width: 100%;
+    resize: none;
+}
+
+.comment-list {
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    margin: 0 10px;
+}
