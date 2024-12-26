@@ -1,17 +1,43 @@
 @charset "utf-8";
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
+/* body */
 body {
+    font-family: 'Gowun Dodum', sans-serif;
     background-color: #f8f9fa;
     padding: 20px;
     margin: 0;
 }
 
+
+/* header, footer */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+header a {
+    text-decoration: none;
+}
+header h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+header h1:hover {
+    transform: scale(1.1);
+}
 .header {
-    background-color: #fff;
+    top: 0;
     padding: 10px;
     width: 100%;
     height: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: fixed;
     left: 0;
     right: 0;
@@ -21,10 +47,9 @@ body {
     align-items: center;
     text-align: center;
 }
-
 .footer {
+    bottom: 0;
     text-align: center;
-    background-color: #fff;
     padding: 10px;
     width: 100%;
     height: 70px;
@@ -35,13 +60,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
 }
-.header {
-    top: 0;
-}
-.footer {
-    bottom: 0;
-}
+
+
+/* content section */
 .content-section {
     margin-top: 220px;
     margin-bottom: 80px;
@@ -49,7 +72,6 @@ body {
     height: calc(100vh - 300px);
     overflow-y: auto;
 }
-
 .team-intro,
 .guestbook {
     background: white;
@@ -58,56 +80,84 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     display: none;
-    /* 기본 : 숨김 */
 }
-
 .team-intro.active,
 .guestbook.active {
     display: block;
-    /* 활성화된 부분만 보임 */
 }
 
+
+/* main section */
+.project-intro {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+.role-box {
+    height: 100%;
+}
+.team-box {
+    height: 100%;
+}
+
+
+/* profile section */
 .profile {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-
 .profile.left {
     flex-direction: row;
 }
-
 .profile.right {
     flex-direction: row-reverse;
 }
-
 .profile img {
     border-radius: 50%;
     width: 80px;
     height: 80px;
     margin: 0 15px;
 }
-
 .profile-info h5 {
     margin: 0;
     font-size: 1.2rem;
 }
-
 .profile-info p {
     margin: 0;
 }
 
+.profile-box {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+.profile-box .profile-info button {
+    margin-top: 10px;
+}
+
+
+/* guest section */
 .guestbook form {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
-
 .guestbook textarea {
     width: 100%;
     resize: none;
 }
-
 .comment-list {
     background: #f8f9fa;
     padding: 10px;
@@ -115,12 +165,10 @@ body {
     max-height: 200px;
     overflow-y: auto;
 }
-
 .buttons {
     text-align: center;
     margin-bottom: 20px;
 }
-
 .buttons button {
     margin: 0 10px;
 }
