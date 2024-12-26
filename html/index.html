@@ -6,99 +6,103 @@
   <title>10조 자기소개</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="../css/main.css" type="text/css">
+  <link rel="stylesheet" href="/css/index.css" type="text/css">
+  
 </head>
 <body>
   <!-- 헤더 -->
   <div id="header" class="header"></div>
 
-  <!-- 버튼 -->
-  <div class="buttons">
-    <button id="teamButton" class="btn btn-primary">팀원 소개</button>
-    <button id="guestbookButton" class="btn btn-secondary">방명록</button>
-  </div>
+    <!-- 버튼 -->
+    <div class="buttons">
+      <button id="teamButton" class="btn btn-primary">팀원 소개</button>
+      <button id="guestbookButton" class="btn btn-secondary">방명록</button>
+    </div>
 
-  <!-- 메인 -->
-  <div class="container">
-    <div class="content-section">
-      <!-- 팀원 소개 -->
-      <div class="team-intro" id="teamIntro">
-        <div class="profile left">
-          <img src="https://via.placeholder.com/80" alt="Member Photo">
-          <div class="profile-info">
-            <h5>박용준</h5>
-            <p>
-              나이 : <br>
-              거주지 : <br>
-              한마디 : 
-            </p>
-            <button onclick="location.href='detail_yongjun.html'" class="btn btn-sm btn-primary">More</button>
+    <!-- 메인 -->
+    <div class="container">
+      <div class="content-section">
+        <!-- 팀원 소개 -->
+        <div class="team-intro" id="teamIntro">
+          <div class="profile left">
+            <img src="https://via.placeholder.com/80" alt="Member Photo">
+            <div class="profile-info">
+              <h5>박용준</h5>
+              <p>
+                나이 : <br>
+                거주지 : <br>
+                한마디 :
+              </p>
+            <button onclick="location.href='/html/detail/yongjun.html'" class="btn btn-sm btn-primary">More</button>
+            </div>
+          </div>
+          <div class="profile right">
+            <img src="https://via.placeholder.com/80" alt="Member Photo">
+            <div class="profile-info">
+              <h5>민혜원</h5>
+              <p>
+                나이 : <br>
+                거주지 : <br>
+                한마디 : 나는 문어
+              </p>
+              <button onclick="location.href='/html/detail/won.html'"
+                class="btn btn-sm btn-primary">More</button>
+            </div>
+          </div>
+          <div class="profile left">
+            <img src="https://via.placeholder.com/80" alt="Member Photo">
+            <div class="profile-info">
+              <h5>한윤희</h5>
+              <p>
+                나이 : 23세<br>
+                거주지 : 원주시<br>
+                한마디 : 화이팅!
+              </p>
+              <button onclick="location.href='/html/detail/yunhee.html'"
+                class="btn btn-sm btn-primary">More</button>
+            </div>
+          </div>
+          <div class="profile right">
+            <img src="https://via.placeholder.com/80" alt="Member Photo">
+            <div class="profile-info">
+              <h5>박성호</h5>
+              <p>
+                나이 : <br>
+                거주지 : <br>
+                한마디 :
+              </p>
+              <button onclick="location.href='/html/detail/seongho.html'"
+                class="btn btn-sm btn-primary">More</button>
+            </div>
+          </div>
+          <div class="profile left">
+            <img src="https://via.placeholder.com/80" alt="Member Photo">
+            <div class="profile-info">
+              <h5>박상현</h5>
+              <p>
+                나이 : <br>
+                거주지 : <br>
+                한마디 :
+              </p>
+              <button onclick="location.href='/html/detail-page-html/'" class="btn btn-sm btn-primary">More</button>
+            </div>
           </div>
         </div>
-        <div class="profile right">
-          <img src="https://via.placeholder.com/80" alt="Member Photo">
-          <div class="profile-info">
-            <h5>민혜원</h5>
-            <p>
-              나이 : <br>
-              거주지 : <br>
-              한마디 : 나는 문어
-            </p>
-            <button class="btn btn-sm btn-primary">More</button>
-          </div>
-        </div>
-        <div class="profile left">
-          <img src="https://via.placeholder.com/80" alt="Member Photo">
-          <div class="profile-info">
-            <h5>한윤희</h5>
-            <p>
-              나이 : 23세<br>
-              거주지 : 원주시<br>
-              한마디 : 화이팅!
-            </p>
-            <button class="btn btn-sm btn-primary">More</button>
-          </div>
-        </div>
-        <div class="profile right">
-          <img src="https://via.placeholder.com/80" alt="Member Photo">
-          <div class="profile-info">
-            <h5>박성호</h5>
-            <p>
-              나이 : <br>
-              거주지 : <br>
-              한마디 : 
-            </p>
-            <button class="btn btn-sm btn-primary">More</button>
-          </div>
-        </div>
-        <div class="profile left">
-          <img src="https://via.placeholder.com/80" alt="Member Photo">
-          <div class="profile-info">
-            <h5>박상현</h5>
-            <p>
-              나이 : <br>
-              거주지 : <br>
-              한마디 : 
-            </p>
-            <button class="btn btn-sm btn-primary">More</button>
-          </div>
-        </div>
-      </div>
 
-      <!-- 방명록 -->
-      <div class="guestbook" id="guestbook">
-        <form>
-          <input type="text" class="form-control" placeholder="ID">
-          <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
-          <button class="btn btn-sm btn-success">Send</button>
-        </form>
-        <div class="comment-list">
-          <p><strong>게스트:</strong> 내용.</p>
-          <p><strong>게스트:</strong> 내용.</p>
+        <!-- 방명록 -->
+        <div class="guestbook" id="guestbook">
+          <form>
+            <input type="text" class="form-control" placeholder="ID">
+            <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
+            <button class="btn btn-sm btn-success">Send</button>
+          </form>
+          <div class="comment-list">
+            <p><strong>게스트:</strong> 내용.</p>
+            <p><strong>게스트:</strong> 내용.</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   <!-- 아래 -->
   <div id="footer" class="footer"></div>
@@ -119,7 +123,7 @@
       teamIntro.classList.remove("active");
     });
 
-    $(function() {
+    $(function () {
       $('#header').load("header.html");
       $('#footer').load("footer.html");
     });
