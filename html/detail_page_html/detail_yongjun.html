@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10조 자기소개</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="/css/main.css" type="text/css"> -->
+    <link rel="stylesheet" href="/css/datail_page_css/detail_yongjun.css" type="text/css">
+</head>
+
+<body>
+    <!-- header -->
+    <!-- <div id="header" class="header"></div> -->
+
+    <!-- contents -->
+    <div class="content-container">
+        <!-- 프로필 이미지 -->
+        <div class="profile-image">
+            <img src="/images/yongjun/yongjun_image.jpg" alt="Profile Image">
+        </div>
+
+        <!-- 이름 및 직업 -->
+        <div class="profile-info">
+            <h1 class="name">박용준</h1>
+            <p class="job-title"><a href="https://github.com/dereck-jun">Backend Developer</a></p>
+        </div>
+
+        <!-- 자기소개 -->
+        <div class="introduction">
+            <div class="row">
+                <div class="col">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#reasonModal">트랙에
+                        <br />참여한 <br /> 이유</button>
+                </div>
+                <div class="col">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#hobbyModal">취미</button>
+                </div>
+                <div class="col">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#studyPeriodModal">공부한 기간</button>
+                </div>
+                <div class="col">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#mbtiModal">MBTI</button>
+                </div>
+                <div class="col">
+                    <button class="btn" data-bs-toggle="modal" data-bs-target="#attributeModal">각오</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 모달 섹션 -->
+        <!-- 트랙 참여 이유 -->
+        <div class="modal fade" id="reasonModal" tabindex="-1" aria-labelledby="reasonModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="reasonModalLabel">트랙 참여 이유</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>대학에서 졸업 작품으로 Django Framework를 사용하여 간단한 웹 페이지를 만들었었습니다. 물론 어디가서 졸업작품이라고 내밀기 많이 부끄러운 수준이었지만
+                            간단한 기능이더라도 제대로 동작되는 것을 보았을 때 성취감을 느껴 개발을 시작하게 되었습니다.</p>
+                        <p>졸업 후 혼자 공부하기 시작했습니다. 하지만 학교를 다니면서 공부하는 것보다 혼자 있으니 점점 나태해지는 것을 느꼈고, 점점 공부를 안하게 되었습니다.</p>
+                        <p>마지막으로 졸업 이후 1년이라는 시간이 되어갔기 때문에 공백기가 길어지면 안될 것 같아서 참여하게 되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 취미 -->
+        <div class="modal fade" id="hobbyModal" tabindex="-1" aria-labelledby="hobbyModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="hobbyModalLabel">취미</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>게임, 노래 듣기, 유튜브 보기를 좋아합니다</p>
+                        <p>게임은 혼자할 땐 롤을 많이 했고, 친구들과 같이 할 땐 멀티가 가능한 게임을 위주로 했던 것 같습니다. 하지만 요즘은 할 시간이 없어서 조금 슬픕니다..</p>
+                        <p>노래는 보통 강의가 아니라 혼자 코드를 짤 때 많이 듣고, 가끔 운동할 때 듣곤 합니다. 최근에 즐겨들은 노래는 겨울 시즌이라 "어반자카파-코끝에 겨울"을 즐겨 듣고
+                            있습니다.</p>
+                        <p>유튜브는 보통 메인 화면에 알고리즘으로 나오는 영상을 주로 보는 것 같습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 공부한 기간 -->
+        <div class="modal fade" id="studyPeriodModal" tabindex="-1" aria-labelledby="studyPeriodModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="studyPeriodModalLabel">공부한 기간</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>24년 2월에 졸업한 이후부터 계속 혼자 공부했습니다. 기간으로만 따지면 8개월 ~ 9개월 정도 되는 것 같습니다.</p>
+                        <p>하지만 실력은 도저히 8 ~ 9개월 공부한 실력이 아니고 아주 처참한 수준입니다..</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MBTI -->
+        <div class="modal fade" id="mbtiModal" tabindex="-1" aria-labelledby="mbtiModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="mbtiModalLabel">MBTI</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/images/yongjun/yongjun_mbti.png" alt="박용준 mbti 검사 결과" class="img-fluid rounded mb-3"
+                            style="max-width: 100%; height: auto;">
+                        <p>제 MBTI는 ISTJ-T 입니다. 업무에 관해서는 규칙적이고 정해져 있는 것을 좋아하지만 그 외엔 보통 귀찮아서 신경을 안쓰는 것 같습니다.</p>
+                        <p>처음 대화할 때는 낯을 많이 가리는 편입니다. 하지만 소심한 성격을 고치기 위해 노력하는 편입니다.</p>
+                        <p>남들이 모르는 내용을 알려주거나 같이 공부하는 것을 좋아합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 각오 -->
+        <div class="modal fade" id="attributeModal" tabindex="-1" aria-labelledby="attributeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="attributeModalLabel">각오</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>1인 군단이 되는 그 날까지 열심히 달려보겠습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer -->
+        <!-- <div id="footer" class="footer"></div> -->
+</body>
+
+<script>
+    $(function () {
+        $('#header').load("header.html");
+        $('#footer').load("footer.html");
+    });
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
