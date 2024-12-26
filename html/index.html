@@ -8,11 +8,52 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="/css/index.css" type="text/css">
-  
+
 </head>
 <script type="module">
-  
+  // Firebase SDK 라이브러리 가져오기
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+  // Firebase 구성 정보 설정
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAGhZ7j3nD5pEli7vhHKVg8K-oBiDXZt3k",
+    authDomain: "sparta-10ecc.firebaseapp.com",
+    projectId: "sparta-10ecc",
+    storageBucket: "sparta-10ecc.firebasestorage.app",
+    messagingSenderId: "1097255307954",
+    appId: "1:1097255307954:web:1418888f657ead8bae57ab",
+    measurementId: "G-9GHN7MZG5T"
+  };
+
+  // Firebase 인스턴스 초기화
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  $('#yongjunDetailBtn').click(async function () {
+    window.location.href = "/html/detail/yongjun.html";
+  })
+
+  $('#hyewonDetailBtn').click(async function () {
+    window.location.href = "/html/detail/hyewon.html";
+  })
+
+  $('#yunheeDetailBtn').click(async function () {
+    window.location.href = "/html/detail/yunhee.html";
+  })
+
+  $('#seonghoDetailBtn').click(async function () {
+    window.location.href = "/html/detail/seongho.html";
+  })
+
+  $('#sanghyeonDetailBtn').click(async function () {
+    window.location.href = "/html/detail/sanghyeon.html";
+  })
 </script>
+
 <body>
   <!-- 헤더 -->
   <div id="header" class="header"></div>
@@ -44,7 +85,7 @@
               거주지 : <br>
               한마디 :
             </p>
-            <button class="btn btn-sm btn-primary">More</button>
+            <button id="yongjunDetailBtn" class="btn btn-sm btn-primary">More</button>
           </div>
         </div>
         <div class="profile right">
@@ -56,7 +97,7 @@
               거주지 : <br>
               한마디 : 나는 문어
             </p>
-            <button class="btn btn-sm btn-primary">More</button>
+            <button id="hyewonDetailBtn" class="btn btn-sm btn-primary">More</button>
           </div>
         </div>
         <div class="profile left">
@@ -68,7 +109,7 @@
               거주지 : 원주시<br>
               한마디 : 화이팅!
             </p>
-            <button class="btn btn-sm btn-primary">More</button>
+            <button id="yunheeDetailBtn" class="btn btn-sm btn-primary">More</button>
           </div>
         </div>
         <div class="profile right">
@@ -80,7 +121,7 @@
               거주지 : <br>
               한마디 :
             </p>
-            <button class="btn btn-sm btn-primary">More</button>
+            <button id="seonghoDetailBtn" class="btn btn-sm btn-primary">More</button>
           </div>
         </div>
         <div class="profile left">
@@ -92,25 +133,25 @@
               거주지 : <br>
               한마디 :
             </p>
-            <button class="btn btn-sm btn-primary">More</button>
+            <button id="sanghyeonDetailBtn" class="btn btn-sm btn-primary">More</button>
           </div>
         </div>
       </div>
 
-        <!-- 방명록 -->
-        <div class="guestbook" id="guestbook">
-          <form>
-            <input type="text" class="form-control" placeholder="ID">
-            <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
-            <button class="btn btn-sm btn-success">Send</button>
-          </form>
-          <div class="comment-list">
-            <p><strong>게스트:</strong> 내용.</p>
-            <p><strong>게스트:</strong> 내용.</p>
-          </div>
+      <!-- 방명록 -->
+      <div class="guestbook" id="guestbook">
+        <form>
+          <input type="text" class="form-control" placeholder="ID">
+          <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
+          <button class="btn btn-sm btn-success">Send</button>
+        </form>
+        <div class="comment-list">
+          <p><strong>게스트:</strong> 내용.</p>
+          <p><strong>게스트:</strong> 내용.</p>
         </div>
       </div>
     </div>
+  </div>
 
   <!-- 아래 -->
   <div id="footer" class="footer"></div>
