@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -11,27 +11,6 @@
 
 </head>
 <script type="module">
-  // Firebase SDK 라이브러리 가져오기
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-  import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-  import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-
-  // Firebase 구성 정보 설정
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAGhZ7j3nD5pEli7vhHKVg8K-oBiDXZt3k",
-    authDomain: "sparta-10ecc.firebaseapp.com",
-    projectId: "sparta-10ecc",
-    storageBucket: "sparta-10ecc.firebasestorage.app",
-    messagingSenderId: "1097255307954",
-    appId: "1:1097255307954:web:1418888f657ead8bae57ab",
-    measurementId: "G-9GHN7MZG5T"
-  };
-
-  // Firebase 인스턴스 초기화
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
 
   $('#yongjunDetailBtn').click(async function () {
     window.location.href = "/html/detail/yongjun.html";
@@ -122,10 +101,10 @@
         <!-- 박용준 -->
         <div class="profile-box">
           <div class="profile left">
-            <img src="/images/yongjun/yongjun-detail.jpg" alt="Member Photo">
+            <img src="/images/yongjun/yongjun-index.jpg" alt="Member Photo">
             <div class="profile-info">
               <h4>박용준</h4>
-              <p> 2001.09.21 (23세/만22세)<br>🌱 서울 은평구<br>💬 "여러분 모두 버그없는 하루 보내세요!"</p>
+              <p> 2001.09.21<br>🌱 서울 은평구<br>💬 "여러분 모두 버그없는 하루 보내세요!"</p>
               <button id="yongjunDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
@@ -134,7 +113,7 @@
         <!-- 민혜원 -->
         <div class="profile-box">
           <div class="profile right">
-            <img src="/images/won/yumi.jpg" alt="Member Photo">
+            <img src="/images/hyewon/yumi.jpg" alt="Member Photo">
             <div class="profile-info">
               <h4>민혜원</h4>
               <p>2000.07.17<br>🌱 경기 화성시<br>💬 "나는 문어"</p>
@@ -161,7 +140,7 @@
             <img src="/images/seongho/seongho.jpg" alt="Member Photo">
             <div class="profile-info">
               <h4>박성호</h4>
-              <p>1997.03.05 28세<br>🌱 경상북도 경산시<br>💬 "다들 화이팅합시다!"</p>
+              <p>1997.03.05<br>🌱 경상북도 경산시<br>💬 "다들 화이팅합시다!"</p>
               <button  id="seonghoDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
