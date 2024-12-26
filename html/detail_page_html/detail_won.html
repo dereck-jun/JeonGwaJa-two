@@ -8,24 +8,98 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="stylesheet" href="/css/datail_page_css/detail_won.css" type="text/css">
 </head>
+
 
 <body>
     <!-- header -->
     <div id="header" class="header"></div>
 
     <!-- contents -->
-    
+    <div class="container my-5">
+        <header class="h1Header">
+            <h1>유미집사 헤오니</h1>
+        </header>
 
+        <!-- 콘텐츠 박스 -->
+        <div class="content-box">
+            <div class="row">
+                <!-- 프로필 이미지 및 기본 정보 -->
+                <div class="col-md-4 text-center">
+                    <div class="profile-image">
+                        <img src="/images/won/yumi.jpg" alt="Profile Image" class="img-fluid rounded-circle">
+                    </div>
+                    <h2 class="mt-3">민혜원</h2>
+                    <p class="text-muted">Backend Developer</p>
+                    <a href="https://github.com/Heni0717" class="btn btn-pink" target="_blank">GitHub</a>
+                    <a href="https://heni0717.tistory.com/" class="btn btn-pink" target="_blank">Tistory</a>
+                </div>
+
+                <!-- 자기소개 및 버튼들 -->
+                <div class="col-md-8">
+                    <div class="row">
+                        <!-- 각 버튼을 카드 형태로 나열 -->
+                        <div class="col-12 col-md-6 mb-4">
+                            <div class="card custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title text-center">트랙참여 이유/공부기간</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>비전공자 시작에서</p>
+                                    <p>전공을 해도 전공자라고 하기 부끄러운 실력을 키워보고자자 ...</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-4">
+                            <div class="card custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title text-center">취미</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>게임 광입니다.......</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-4">
+                            <div class="card custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title text-center">MBTI</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>ENTJ</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 mb-4">
+                            <div class="card custom-card">
+                                <div class="card-header">
+                                    <h5 class="card-title text-center">각오</h5>
+                                </div>
+                                <div class="card-body">
+                                    <p>각오는 너무 거창하고... 9to9 출석이라도 꾸준히 해보자가 목표입니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- footer -->
     <div id="footer" class="footer"></div>
 </body>
+
 <script>
     $(function () {
-        $('#header').load("header.html");
-        $('#footer').load("footer.html");
+        $('#header').load("../header.html");
+        $('#footer').load("../footer.html");
     });
 </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

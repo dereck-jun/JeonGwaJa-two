@@ -1,0 +1,107 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+body {
+    font-family: 'Gowun Dodum', sans-serif;
+    background-color: #f4f4f9;
+}
+
+.h1Header {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    background-color: pink;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.content-box {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid pink;
+}
+
+.profile-info h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.profile-info p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.custom-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-body p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn-pink {
+    background-color: #ff69b4;  /* 핑크색 */
+    border-color: #ff69b4;
+    color: white;
+}
+
+.btn-pink:hover {
+    background-color: #ff1493; /* 핑크색 보다 진한 색상 */
+    border-color: #ff1493;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .profile-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-info h2 {
+        font-size: 2rem;
+    }
+
+    .card-body .btn {
+        font-size: 1rem;
+    }
+}
