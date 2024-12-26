@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,85 +10,90 @@
   <link rel="stylesheet" href="/css/index.css" type="text/css">
   
 </head>
+
 <body>
   <!-- 헤더 -->
   <div id="header" class="header"></div>
 
-    <!-- 버튼 -->
-    <div class="buttons">
-      <button id="teamButton" class="btn btn-primary">팀원 소개</button>
-      <button id="guestbookButton" class="btn btn-secondary">방명록</button>
-    </div>
+  <!-- 메인 -->
+  <div class="container">
+    <div class="content-section">
+      <!-- 버튼 -->
+      <div class="buttons">
+        <button id="homeButton" class="btn btn-primary">메인</button>
+        <button id="teamButton" class="btn btn-secondary">팀원 소개</button>
+        <button id="guestbookButton" class="btn btn-secondary">방명록</button>
+      </div>
 
-    <!-- 메인 -->
-    <div class="container">
-      <div class="content-section">
-        <!-- 팀원 소개 -->
-        <div class="team-intro" id="teamIntro">
-          <div class="profile left">
-            <img src="https://via.placeholder.com/80" alt="Member Photo">
-            <div class="profile-info">
-              <h5>박용준</h5>
-              <p>
-                나이 : <br>
-                거주지 : <br>
-                한마디 :
-              </p>
-            <button onclick="location.href='/html/detail/yongjun.html'" class="btn btn-sm btn-primary">More</button>
-            </div>
-          </div>
-          <div class="profile right">
-            <img src="https://via.placeholder.com/80" alt="Member Photo">
-            <div class="profile-info">
-              <h5>민혜원</h5>
-              <p>
-                나이 : <br>
-                거주지 : <br>
-                한마디 : 나는 문어
-              </p>
-              <button onclick="location.href='/html/detail/won.html'"
-                class="btn btn-sm btn-primary">More</button>
-            </div>
-          </div>
-          <div class="profile left">
-            <img src="https://via.placeholder.com/80" alt="Member Photo">
-            <div class="profile-info">
-              <h5>한윤희</h5>
-              <p>
-                나이 : 23세<br>
-                거주지 : 원주시<br>
-                한마디 : 화이팅!
-              </p>
-              <button onclick="location.href='/html/detail/yunhee.html'"
-                class="btn btn-sm btn-primary">More</button>
-            </div>
-          </div>
-          <div class="profile right">
-            <img src="https://via.placeholder.com/80" alt="Member Photo">
-            <div class="profile-info">
-              <h5>박성호</h5>
-              <p>
-                나이 : <br>
-                거주지 : <br>
-                한마디 :
-              </p>
-              <button onclick="location.href='/html/detail/seongho.html'"
-                class="btn btn-sm btn-primary">More</button>
-            </div>
-          </div>
-          <div class="profile left">
-            <img src="https://via.placeholder.com/80" alt="Member Photo">
-            <div class="profile-info">
-              <h5>박상현</h5>
-              <p>
-                나이 : <br>
-                거주지 : <br>
-                한마디 :
-              </p>
-              <button onclick="location.href='/html/detail-page-html/'" class="btn btn-sm btn-primary">More</button>
-            </div>
+      <!-- 메인 섹션 -->
+      <div class="section" id="mainSection">
+        <h2>메인</h2>
+        <p>여기에 메인 콘텐츠를 추가하세요.</p>
+      </div>
+
+      <!-- 팀원 소개 -->
+      <div class="team-intro" id="teamIntro">
+        <div class="profile left">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>박용준</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 :
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
           </div>
         </div>
+        <div class="profile right">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>민혜원</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 : 나는 문어
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+        <div class="profile left">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>한윤희</h5>
+            <p>
+              나이 : 23세<br>
+              거주지 : 원주시<br>
+              한마디 : 화이팅!
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+        <div class="profile right">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>박성호</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 :
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+        <div class="profile left">
+          <img src="https://via.placeholder.com/80" alt="Member Photo">
+          <div class="profile-info">
+            <h5>박상현</h5>
+            <p>
+              나이 : <br>
+              거주지 : <br>
+              한마디 :
+            </p>
+            <button class="btn btn-sm btn-primary">More</button>
+          </div>
+        </div>
+      </div>
 
         <!-- 방명록 -->
         <div class="guestbook" id="guestbook">
@@ -108,19 +114,30 @@
   <div id="footer" class="footer"></div>
 
   <script>
+    const homeButton = document.getElementById("homeButton");
     const teamButton = document.getElementById("teamButton");
     const guestbookButton = document.getElementById("guestbookButton");
+
+    const mainSection = document.getElementById("mainSection");
     const teamIntro = document.getElementById("teamIntro");
     const guestbook = document.getElementById("guestbook");
 
+    homeButton.addEventListener("click", () => {
+      mainSection.style.display = "block";
+      teamIntro.style.display = "none";
+      guestbook.style.display = "none";
+    });
+
     teamButton.addEventListener("click", () => {
-      teamIntro.classList.add("active");
-      guestbook.classList.remove("active");
+      mainSection.style.display = "none";
+      teamIntro.style.display = "block";
+      guestbook.style.display = "none";
     });
 
     guestbookButton.addEventListener("click", () => {
-      guestbook.classList.add("active");
-      teamIntro.classList.remove("active");
+      mainSection.style.display = "block";
+      teamIntro.style.display = "none";
+      guestbook.style.display = "none";
     });
 
     $(function () {
@@ -129,4 +146,5 @@
     });
   </script>
 </body>
+
 </html>
