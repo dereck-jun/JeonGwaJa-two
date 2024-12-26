@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,27 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="../css/main.css" type="text/css">
 </head>
+
 <body>
   <!-- 헤더 -->
   <div id="header" class="header"></div>
 
-  <!-- 버튼 -->
-  <div class="buttons">
-    <button id="teamButton" class="btn btn-primary">팀원 소개</button>
-    <button id="guestbookButton" class="btn btn-secondary">방명록</button>
-  </div>
-
   <!-- 메인 -->
   <div class="container">
     <div class="content-section">
+      <!-- 버튼 -->
+      <div class="buttons">
+        <button id="homeButton" class="btn btn-primary">메인</button>
+        <button id="teamButton" class="btn btn-secondary">팀원 소개</button>
+        <button id="guestbookButton" class="btn btn-secondary">방명록</button>
+      </div>
+
+      <!-- 메인 섹션 -->
+      <div class="section" id="mainSection">
+        <h2>메인</h2>
+        <p>여기에 메인 콘텐츠를 추가하세요.</p>
+      </div>
+
       <!-- 팀원 소개 -->
       <div class="team-intro" id="teamIntro">
         <div class="profile left">
@@ -30,7 +39,7 @@
             <p>
               나이 : <br>
               거주지 : <br>
-              한마디 : 
+              한마디 :
             </p>
             <button onclick="location.href='detail_yongjun.html'" class="btn btn-sm btn-primary">More</button>
           </div>
@@ -66,7 +75,7 @@
             <p>
               나이 : <br>
               거주지 : <br>
-              한마디 : 
+              한마디 :
             </p>
             <button class="btn btn-sm btn-primary">More</button>
           </div>
@@ -78,7 +87,7 @@
             <p>
               나이 : <br>
               거주지 : <br>
-              한마디 : 
+              한마디 :
             </p>
             <button class="btn btn-sm btn-primary">More</button>
           </div>
@@ -104,25 +113,37 @@
   <div id="footer" class="footer"></div>
 
   <script>
+    const homeButton = document.getElementById("homeButton");
     const teamButton = document.getElementById("teamButton");
     const guestbookButton = document.getElementById("guestbookButton");
+
+    const mainSection = document.getElementById("mainSection");
     const teamIntro = document.getElementById("teamIntro");
     const guestbook = document.getElementById("guestbook");
 
+    homeButton.addEventListener("click", () => {
+      mainSection.style.display = "block";
+      teamIntro.style.display = "none";
+      guestbook.style.display = "none";
+    });
+
     teamButton.addEventListener("click", () => {
-      teamIntro.classList.add("active");
-      guestbook.classList.remove("active");
+      mainSection.style.display = "none";
+      teamIntro.style.display = "block";
+      guestbook.style.display = "none";
     });
 
     guestbookButton.addEventListener("click", () => {
-      guestbook.classList.add("active");
-      teamIntro.classList.remove("active");
+      mainSection.style.display = "block";
+      teamIntro.style.display = "none";
+      guestbook.style.display = "none";
     });
 
-    $(function() {
+    $(function () {
       $('#header').load("header.html");
       $('#footer').load("footer.html");
     });
   </script>
 </body>
+
 </html>
