@@ -11,8 +11,49 @@
 
 </head>
 <script type="module">
-  
+  // Firebase SDK 라이브러리 가져오기
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+  import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+
+  // Firebase 구성 정보 설정
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyAGhZ7j3nD5pEli7vhHKVg8K-oBiDXZt3k",
+    authDomain: "sparta-10ecc.firebaseapp.com",
+    projectId: "sparta-10ecc",
+    storageBucket: "sparta-10ecc.firebasestorage.app",
+    messagingSenderId: "1097255307954",
+    appId: "1:1097255307954:web:1418888f657ead8bae57ab",
+    measurementId: "G-9GHN7MZG5T"
+  };
+
+  // Firebase 인스턴스 초기화
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  $('#yongjunDetailBtn').click(async function () {
+    window.location.href = "/html/detail/yongjun.html";
+  })
+
+  $('#hyewonDetailBtn').click(async function () {
+    window.location.href = "/html/detail/hyewon.html";
+  })
+
+  $('#yunheeDetailBtn').click(async function () {
+    window.location.href = "/html/detail/yunhee.html";
+  })
+
+  $('#seonghoDetailBtn').click(async function () {
+    window.location.href = "/html/detail/seongho.html";
+  })
+
+  $('#sanghyeonDetailBtn').click(async function () {
+    window.location.href = "/html/detail/sanghyeon.html";
+  })
 </script>
+
 <body>
   <!-- 헤더 -->
   <div id="header" class="header"></div>
@@ -63,7 +104,7 @@
             <div class="profile-info">
               <h4>박용준</h4>
               <p>2001.09.21 (23세/만22세)<br>서울 은평구<br>" 여러분 모두 버그없는 하루 보내세요! "</p>
-              <button class="btn btn-sm btn-primary">More</button>
+              <button id="yongjunDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
         </div>
@@ -75,7 +116,7 @@
             <div class="profile-info">
               <h4>민혜원</h4>
               <p>2000.07.17<br>경기 화성시<br>" 나는 문어 "</p>
-              <button class="btn btn-sm btn-primary">More</button>
+              <button id="hyewonDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
         </div>
@@ -87,7 +128,7 @@
             <div class="profile-info">
               <h4>한윤희</h4>
               <p>23세<br>원주시<br>" 화이팅! "</p>
-              <button class="btn btn-sm btn-primary">More</button>
+              <button id="yunheeDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
         </div>
@@ -99,7 +140,7 @@
             <div class="profile-info">
               <h4>박성호</h4>
               <p>1997.03.05 28세<br>경상북도 경산시<br>" 다들 화이팅합시다! "</p>
-              <button class="btn btn-sm btn-primary">More</button>
+              <button  id="seonghoDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
         </div>
@@ -111,7 +152,7 @@
             <div class="profile-info">
               <h5>박상현</h5>
               <p>나이 : <br>거주지 : <br>한마디 :</p>
-              <button class="btn btn-sm btn-primary">More</button>
+              <button id="sanghyeonDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
         </div>
@@ -132,7 +173,7 @@
     </div>
   </div>
 
-  <!-- 아래 -->
+  <!-- footer -->
   <div id="footer" class="footer"></div>
 
   <script>
