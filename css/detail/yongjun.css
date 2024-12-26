@@ -19,6 +19,11 @@ body {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.name > a {
+    text-decoration: none;
+    color: black;
+}
+
 .job-title {
     margin-top: 16px;
 }
