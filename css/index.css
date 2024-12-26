@@ -19,9 +19,11 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
 }
+
 header a {
     text-decoration: none;
 }
+
 header h1 {
     font-size: 4rem;
     font-weight: bold;
@@ -30,9 +32,11 @@ header h1 {
     margin: 0;
     transition: transform 0.3s ease;
 }
+
 header h1:hover {
     transform: scale(1.1);
 }
+
 .header {
     top: 0;
     padding: 10px;
@@ -47,6 +51,7 @@ header h1:hover {
     align-items: center;
     text-align: center;
 }
+
 .footer {
     bottom: 0;
     text-align: center;
@@ -72,6 +77,7 @@ header h1:hover {
     height: calc(100vh - 300px);
     overflow-y: auto;
 }
+
 .team-intro,
 .guestbook {
     background: white;
@@ -81,6 +87,7 @@ header h1:hover {
     transition: all 0.3s ease;
     display: none;
 }
+
 .team-intro.active,
 .guestbook.active {
     display: block;
@@ -95,6 +102,7 @@ header h1:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+
 .box {
     background: white;
     border-radius: 10px;
@@ -102,9 +110,11 @@ header h1:hover {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
 }
+
 .role-box {
     height: 100%;
 }
+
 .team-box {
     height: 100%;
 }
@@ -116,33 +126,40 @@ header h1:hover {
     align-items: center;
     margin-bottom: 20px;
 }
+
 .profile.left {
     flex-direction: row;
 }
+
 .profile.right {
     flex-direction: row-reverse;
 }
+
 .profile img {
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 0 15px;
 }
-.profile-info h5 {
-    margin: 0;
-    font-size: 1.2rem;
+
+.profile-info h4 {
+    margin-bottom: 5px;
+    font-weight: 300;
 }
+
 .profile-info p {
     margin: 0;
 }
 
 .profile-box {
-    background-color: #f8f9fa;
+    background-color: white;
     border-radius: 10px;
     margin: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    border: none;
 }
+
 .profile-box .profile-info button {
     margin-top: 10px;
 }
@@ -154,10 +171,12 @@ header h1:hover {
     gap: 10px;
     margin-bottom: 20px;
 }
+
 .guestbook textarea {
     width: 100%;
     resize: none;
 }
+
 .comment-list {
     background: #f8f9fa;
     padding: 10px;
@@ -165,10 +184,12 @@ header h1:hover {
     max-height: 200px;
     overflow-y: auto;
 }
+
 .buttons {
     text-align: center;
     margin-bottom: 20px;
 }
+
 .buttons button {
     margin: 0 10px;
 }
