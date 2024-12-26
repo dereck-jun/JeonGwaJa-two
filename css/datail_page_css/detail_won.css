@@ -80,17 +80,17 @@ body {
 }
 
 .btn-pink {
-    background-color: #ff69b4;  /* 핑크색 */
+    background-color: #ff69b4;
     border-color: #ff69b4;
     color: white;
 }
 
 .btn-pink:hover {
-    background-color: #ff1493; /* 핑크색 보다 진한 색상 */
+    background-color: #ff1493;
     border-color: #ff1493;
 }
 
-/* 반응형 디자인 */
+
 @media (max-width: 768px) {
     .profile-image img {
         width: 150px;
