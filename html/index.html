@@ -7,15 +7,15 @@
   <title>10조 자기소개</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="/css/index.css" type="text/css">
-  <script src="/apiKey.js"></script>
+  <link rel="stylesheet" href="../css/index.css" type="text/css">
+  <script src="../apiKey.js"></script>
   <script type="module">
     // Firebase SDK 라이브러리 가져오기
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
     import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
     import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
     import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-    import config from "/apiKey.js";
+    import config from "../apiKey.js";
 
     // Firebase 구성 정보 설정
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -63,23 +63,23 @@
     });
 
     $('#yongjunDetailBtn').click(async function () {
-      window.location.href = "/html/detail/yongjun.html";
+      window.location.href = "./detail/yongjun.html";
     })
 
     $('#hyewonDetailBtn').click(async function () {
-      window.location.href = "/html/detail/hyewon.html";
+      window.location.href = "./detail/hyewon.html";
     })
 
     $('#yunheeDetailBtn').click(async function () {
-      window.location.href = "/html/detail/yunhee.html";
+      window.location.href = "./detail/yunhee.html";
     })
 
     $('#seonghoDetailBtn').click(async function () {
-      window.location.href = "/html/detail/seongho.html";
+      window.location.href = "./detail/seongho.html";
     })
 
     $('#sanghyeonDetailBtn').click(async function () {
-      window.location.href = "/html/detail/sanghyeon.html";
+      window.location.href = "./detail/sanghyeon.html";
     })
   </script>
 </head>
@@ -152,7 +152,7 @@
         <!-- 박용준 -->
         <div class="profile-box">
           <div class="profile left">
-            <img src="/images/yongjun/yongjun-index.jpg" alt="Member Photo">
+            <img src="../images/yongjun/yongjun-index.jpg" alt="Member Photo">
             <div class="profile-info">
               <h4>박용준</h4>
               <p> 2001.09.21<br>🌱 서울 은평구<br>💬 "여러분 모두 버그없는 하루 보내세요!"</p>
@@ -164,7 +164,7 @@
         <!-- 민혜원 -->
         <div class="profile-box">
           <div class="profile right">
-            <img src="/images/hyewon/won_main.jpg" alt="Member Photo">
+            <img src="../images/hyewon/won_main.jpg" alt="Member Photo">
             <div class="profile-info">
               <h4>민혜원</h4>
               <p>2000.07.17<br>🌱 경기 화성시<br>💬 "나는 문어"</p>
@@ -176,7 +176,7 @@
         <!-- 윤희님 -->
         <div class="profile-box">
           <div class="profile left">
-            <img src="/images/yunhee/YunHee.jpg" alt="Member Photo">
+            <img src="../images/yunhee/YunHee.jpg" alt="Member Photo">
             <div class="profile-info">
               <h4>한윤희</h4>
               <p>23세<br>🌱 원주시<br>💬 "화이팅!"</p>
@@ -188,7 +188,7 @@
         <!-- 성호님 -->
         <div class="profile-box">
           <div class="profile right">
-            <img src="/images/seongho/seongho.jpg" alt="Member Photo">
+            <img src="../images/seongho/seongho.jpg" alt="Member Photo">
             <div class="profile-info">
               <h4>박성호</h4>
               <p>1997.03.05<br>🌱 경상북도 경산시<br>💬 "다들 화이팅합시다!"</p>
@@ -255,8 +255,8 @@
   });
 
   $(function () {
-    $('#header').load("header.html");
-    $('#footer').load("footer.html");
+    $('#header').load("./header.html");
+    $('#footer').load("./footer.html");
   });
 </script>
 
