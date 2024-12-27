@@ -47,11 +47,11 @@
           alert('저장 완료!');
 
           let newEntryHtml = `<p><strong>${username}:</strong> ${comment}</p>`;
-      $('.comment-list').append(newEntryHtml);
+          $('.comment-list').append(newEntryHtml);
 
-      // 입력 필드 초기화
-      $('#username').val('');
-      $('#comment').val('');
+          // 입력 필드 초기화
+          $('#username').val('');
+          $('#comment').val('');
         } catch (error) {
           console.error("Error adding document: ", error);
           alert('저장에 실패했습니다. 다시 시도해주세요.');
@@ -97,7 +97,17 @@
 
 <body>
   <!-- 헤더 -->
-  <div id="header" class="header"></div>
+  <div id="header" class="header">
+    <header>
+      <a href="./index.html">
+        <img src="https://i.pinimg.com/474x/4a/60/a9/4a60a95017b5e5f42082ac8221cae5b4.jpg" style="border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          margin: 0 15px;" alt="">
+        <h1>" 전과자둘 "</h1>
+      </a>
+    </header>
+  </div>
 
   <!-- 메인 -->
   <div class="container">
@@ -253,7 +263,6 @@
   });
 
   $(function () {
-    $('#header').load("./header.html");
     $('#footer').load("./footer.html");
   });
 </script>
