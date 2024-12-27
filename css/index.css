@@ -144,6 +144,7 @@ header h1:hover {
 
 .profile.right {
     flex-direction: row-reverse;
+    text-align: right;
 }
 
 .profile img {

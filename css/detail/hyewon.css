@@ -90,6 +90,19 @@ body {
     background-color: #ff1493;
     border-color: #ff1493;
 }
+.img-won {
+    max-width: 100px;
+    height: auto;
+}
+
+.imgCardBody {
+    display: flex;
+    align-items: center;
+}
+
+.ml-3 {
+    margin-left: 1rem;
+}
 
 
 @media (max-width: 768px) {
