@@ -8,27 +8,81 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <link rel="stylesheet" href="/css/index.css" type="text/css">
+  <script src="/apiKey.js"></script>
+  <script type="module">
+    // Firebase SDK 라이브러리 가져오기
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import config from "/apiKey.js";
 
+    // Firebase 구성 정보 설정
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = config;
+
+    // Firebase 인스턴스 초기화
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    $('#saveBtn').click(async function (event) {
+      event.preventDefault(); // 기본 동작 방지
+      let username = $('#username').val();
+      let comment = $('#comment').val();
+
+      if (username && comment) {
+        try {
+          let doc = {
+            'username': username,
+            'comment': comment
+          };
+          await addDoc(collection(db, "guestbook"), doc);
+
+          alert('저장 완료!');
+
+          window.location.reload(); // 페이지 새로고침
+        } catch (error) {
+          console.error("Error adding document: ", error);
+          alert('저장에 실패했습니다. 다시 시도해주세요.');
+        }
+      } else {
+        alert('모든 필드를 입력해주세요.');
+      }
+    });
+
+    let data = await getDocs(collection(db, "guestbook"));
+    data.forEach(doc => {
+      let row = doc.data();
+
+      let username = row['username'];
+      let comment = row['comment'];
+
+      let tempHtml = `<p><strong>${username}:</strong> ${comment}</p>`
+
+      $('.comment-list').append(tempHtml);
+    });
+
+    $('#yongjunDetailBtn').click(async function () {
+      window.location.href = "/html/detail/yongjun.html";
+    })
+
+    $('#hyewonDetailBtn').click(async function () {
+      window.location.href = "/html/detail/hyewon.html";
+    })
+
+    $('#yunheeDetailBtn').click(async function () {
+      window.location.href = "/html/detail/yunhee.html";
+    })
+
+    $('#seonghoDetailBtn').click(async function () {
+      window.location.href = "/html/detail/seongho.html";
+    })
+
+    $('#sanghyeonDetailBtn').click(async function () {
+      window.location.href = "/html/detail/sanghyeon.html";
+    })
+  </script>
 </head>
-<script type="module">
-
-  $('#yongjunDetailBtn').click(async function () {
-    window.location.href = "/html/detail/yongjun.html";
-  })
-
-  $('#hyewonDetailBtn').click(async function () {
-    window.location.href = "/html/detail/hyewon.html";
-  })
-
-  $('#yunheeDetailBtn').click(async function () {
-    window.location.href = "/html/detail/yunhee.html";
-  })
-
-  $('#seonghoDetailBtn').click(async function () {
-    window.location.href = "/html/detail/seongho.html";
-  })
-  
-</script>
 
 <body>
   <!-- 헤더 -->
@@ -60,16 +114,17 @@
                 <br>&#128103; 한윤희 : 메인페이지 HTML
                 <br>&#128103; 민혜원 : 메인페이지 CSS
                 <br>&#128102; 박성호 : 기능 시연 영상
+                <br>&#128102; 박상현 : 기능 시연 영상
                 <br>✔ 공통 작업 : 각 개인 페이지 제작 및 디자인
-                <br>✔ 발표자 : 
+                <br>✔ 발표자 :
               </p>
               <hr>
               <h3>사용 기술</h3>
               <p>✔ Tool : GitHub, Visual Studio code<br>
                 ✔ HTML:5, CSS, JavaScript, BootStrap<br>
                 ✔ Firestore Database<br>
-                ✔ 촬영도구 : <br>
-                ✔ 발표자료 : </p>
+                ✔ 촬영도구<br>
+                ✔ 발표자료</p>
             </div>
           </div>
           <div class="col-md-6">
@@ -137,21 +192,33 @@
             <div class="profile-info">
               <h4>박성호</h4>
               <p>1997.03.05<br>🌱 경상북도 경산시<br>💬 "다들 화이팅합시다!"</p>
-              <button  id="seonghoDetailBtn" class="btn btn-sm btn-primary">More</button>
+              <button id="seonghoDetailBtn" class="btn btn-sm btn-primary">More</button>
             </div>
           </div>
         </div>
 
+        <!-- 상현님 -->
+        <div class="profile-box">
+          <div class="profile left">
+            <img src="https://via.placeholder.com/80" alt="Member Photo">
+            <div class="profile-info">
+              <h5>박상현</h5>
+              <p>나이 : <br>🌱 거주지 : <br>💬 한마디 :</p>
+              <button id="sanghyeonDetailBtn" class="btn btn-sm btn-primary">More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- 방명록 -->
       <div class="guestbook" id="guestbook">
         <form>
-          <input type="text" class="form-control" placeholder="ID">
-          <textarea class="form-control" rows="1" placeholder="Comment"></textarea>
-          <button class="btn btn-sm">Send</button>
+          <input id="username" type="text" class="form-control" placeholder="username" autocomplete="off">
+          <textarea id="comment" class="form-control" rows="1" placeholder="comment" autocomplete="off"></textarea>
+          <button id="saveBtn" class="btn btn-sm">Send</button>
         </form>
         <div class="comment-list">
-          <p><strong>게스트:</strong> 내용.</p>
-          <p><strong>게스트:</strong> 내용.</p>
+
         </div>
       </div>
     </div>
@@ -159,39 +226,38 @@
 
   <!-- footer -->
   <div id="footer" class="footer"></div>
-
-  <script>
-    const homeButton = document.getElementById("homeButton");
-    const teamButton = document.getElementById("teamButton");
-    const guestbookButton = document.getElementById("guestbookButton");
-
-    const mainSection = document.getElementById("mainSection");
-    const teamIntro = document.getElementById("teamIntro");
-    const guestbook = document.getElementById("guestbook");
-
-    homeButton.addEventListener("click", () => {
-      mainSection.style.display = "block";
-      teamIntro.style.display = "none";
-      guestbook.style.display = "none";
-    });
-
-    teamButton.addEventListener("click", () => {
-      mainSection.style.display = "none";
-      teamIntro.style.display = "block";
-      guestbook.style.display = "none";
-    });
-
-    guestbookButton.addEventListener("click", () => {
-      mainSection.style.display = "none";
-      teamIntro.style.display = "none";
-      guestbook.style.display = "block";
-    });
-
-    $(function () {
-      $('#header').load("header.html");
-      $('#footer').load("footer.html");
-    });
-  </script>
 </body>
+<script>
+  const homeButton = document.getElementById("homeButton");
+  const teamButton = document.getElementById("teamButton");
+  const guestbookButton = document.getElementById("guestbookButton");
+
+  const mainSection = document.getElementById("mainSection");
+  const teamIntro = document.getElementById("teamIntro");
+  const guestbook = document.getElementById("guestbook");
+
+  homeButton.addEventListener("click", () => {
+    mainSection.style.display = "block";
+    teamIntro.style.display = "none";
+    guestbook.style.display = "none";
+  });
+
+  teamButton.addEventListener("click", () => {
+    mainSection.style.display = "none";
+    teamIntro.style.display = "block";
+    guestbook.style.display = "none";
+  });
+
+  guestbookButton.addEventListener("click", () => {
+    mainSection.style.display = "none";
+    teamIntro.style.display = "none";
+    guestbook.style.display = "block";
+  });
+
+  $(function () {
+    $('#header').load("header.html");
+    $('#footer').load("footer.html");
+  });
+</script>
 
 </html>
