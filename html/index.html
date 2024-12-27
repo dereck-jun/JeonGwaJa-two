@@ -46,7 +46,12 @@
 
           alert('저장 완료!');
 
-          window.location.reload(); // 페이지 새로고침
+          let newEntryHtml = `<p><strong>${username}:</strong> ${comment}</p>`;
+      $('.comment-list').append(newEntryHtml);
+
+      // 입력 필드 초기화
+      $('#username').val('');
+      $('#comment').val('');
         } catch (error) {
           console.error("Error adding document: ", error);
           alert('저장에 실패했습니다. 다시 시도해주세요.');
