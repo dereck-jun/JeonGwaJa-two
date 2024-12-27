@@ -4,8 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10조 자기소개</title>
-    <link rel="stylesheet" href="/css/detail/seongho.css" type="text/css">
+    <title>자기소개</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum:wght@400;600&display=swap');
+
+        * {
+            font-family: "Gowun Dodum", serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.8;
+            padding: 20px;
+            font-size: 18px;
+        }
+
+        .me {
+            background-color: skyblue;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            border-radius: 20px;
+        }
+
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-container img {
+            width: 150px;
+            height: 200px;
+            border-radius: 10px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .profile-description {
+            flex: 1;
+        }
+
+        .profile-description h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .profile-description p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+
+        .social-links {
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #4e91fc;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .social-links img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .track,
+        .single,
+        .study {
+            max-width: 700px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .track h3,
+        .single h3,
+        .study h3 {
+            font-size: 22px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .study ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .study li {
+            background: #f0f4fa;
+            margin: 5px 0;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .back-button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: #4e91fc;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #357ae8;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .back-button:active {
+            background-color: #2d5bbf;
+            transform: translateY(1px);
+            box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 
 <body>
@@ -13,7 +158,6 @@
     <div class="me">
         <h1>About Me</h1>
     </div>
-
 
     <div class="profile-container">
         <img src="/images/seongho/seongho.jpg" class="card-img-top" alt="Seongho's Image">
@@ -25,28 +169,13 @@
             <p>취미: 게임</p>
             <p>MBTI: ISTP</p>
             <p>각오 : 아직 부족하지만 캠프 기간 동안 열심히 공부해서 수료를 목표로 하겠습니다!</p>
-            <div class="social-links">
-
-                <a href="https://www.instagram.com/achvroomy" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                    instagram
-                </a>
-
-                <a href="https://hgg0305.tistory.com/" target="_blank">
-                    <img src="https://t1.daumcdn.net/tistory_admin/static/images/openGraph/opengraph.png" alt="Tistory"
-                        class="social-icon">
-                    Blog
-                </a>
-            </div>
         </div>
     </div>
-
 
     <div class="track">
         <h3>트랙에 참가한 이유</h3>
         <p>졸업하고 취업 준비 겸 자바 공부를 하고 있다가 유튜브 광고에서 보고 좋은 기회가 될 것 같아서 지원하게 되었습니다.</p>
     </div>
-
 
     <div class="single">
         <h3>목표를 이루기 위한 다짐</h3>
@@ -55,7 +184,6 @@
         <p>3. 틈틈이 자격증 공부하기</p>
     </div>
 
-
     <div class="study">
         <h3>보유 자격증</h3>
         <ul>
@@ -63,6 +191,11 @@
             <li>컴퓨터활용능력 1급</li>
             <li>한국사능력검정시험 1급</li>
         </ul>
+    </div>
+
+    <!-- Back Button -->
+    <div class="back-button-container">
+        <a href="../index.html" class="back-button">메인 페이지로 이동</a>
     </div>
 </body>
 
