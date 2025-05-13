@@ -11,9 +11,7 @@
   <script type="module">
     // Firebase SDK 라이브러리 가져오기
     import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
-    import { getFirestore } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-    import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
-    import { getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
+    import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js";
 
     // Firebase 구성 정보 설정
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -31,67 +29,56 @@
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    $('#saveBtn').click(async function (event) {
-      event.preventDefault(); // 기본 동작 방지
-      let username = $('#username').val();
-      let comment = $('#comment').val();
+    document.addEventListener("DOMContentLoaded", async function () {
+      document.getElementById("saveBtn").addEventListener("click", async function (event) {
+        event.preventDefault();
+        let username = document.getElementById("username").value;
+        let comment = document.getElementById("comment").value;
 
-      if (username && comment) {
-        try {
-          let doc = {
-            'username': username,
-            'comment': comment
-          };
-          await addDoc(collection(db, "guestbook"), doc);
-
-          alert('저장 완료!');
-
-          let newEntryHtml = `<p><strong>${username}:</strong> ${comment}</p>`;
-          $('.comment-list').append(newEntryHtml);
-
-          // 입력 필드 초기화
-          $('#username').val('');
-          $('#comment').val('');
-        } catch (error) {
-          console.error("Error adding document: ", error);
-          alert('저장에 실패했습니다. 다시 시도해주세요.');
+        if (username && comment) {
+          try {
+            let doc = {
+              username,
+              comment
+            };
+            await addDoc(collection(db, "guestbook"), doc);
+            alert('저장 완료!');
+            let newEntryHtml = `<p><strong>${username}:</strong> ${comment}</p>`;
+            document.querySelector('.comment-list').insertAdjacentHTML('beforeend', newEntryHtml);
+            document.getElementById("username").value = '';
+            document.getElementById("comment").value = '';
+          } catch (error) {
+            console.error("Error adding document: ", error);
+            alert('저장에 실패했습니다. 다시 시도해주세요.');
+          }
+        } else {
+          alert('모든 필드를 입력해주세요.');
         }
-      } else {
-        alert('모든 필드를 입력해주세요.');
-      }
+      });
+
+      let data = await getDocs(collection(db, "guestbook"));
+      data.forEach(doc => {
+        let { username, comment } = doc.data();
+        let tempHtml = `<p><strong>${username}:</strong> ${comment}</p>`;
+        document.querySelector('.comment-list').insertAdjacentHTML('beforeend', tempHtml);
+      });
+
+      document.getElementById("yongjunDetailBtn").addEventListener("click", () => {
+        window.location.href = "./detail/yongjun.html";
+      });
+      document.getElementById("hyewonDetailBtn").addEventListener("click", () => {
+        window.location.href = "./detail/hyewon.html";
+      });
+      document.getElementById("yunheeDetailBtn").addEventListener("click", () => {
+        window.location.href = "./detail/yunhee.html";
+      });
+      document.getElementById("seonghoDetailBtn").addEventListener("click", () => {
+        window.location.href = "./detail/seongho.html";
+      });
+      document.getElementById("sanghyeonDetailBtn")?.addEventListener("click", () => {
+        window.location.href = "./detail/sanghyeon.html";
+      });
     });
-
-    let data = await getDocs(collection(db, "guestbook"));
-    data.forEach(doc => {
-      let row = doc.data();
-
-      let username = row['username'];
-      let comment = row['comment'];
-
-      let tempHtml = `<p><strong>${username}:</strong> ${comment}</p>`
-
-      $('.comment-list').append(tempHtml);
-    });
-
-    $('#yongjunDetailBtn').click(async function () {
-      window.location.href = "./detail/yongjun.html";
-    })
-
-    $('#hyewonDetailBtn').click(async function () {
-      window.location.href = "./detail/hyewon.html";
-    })
-
-    $('#yunheeDetailBtn').click(async function () {
-      window.location.href = "./detail/yunhee.html";
-    })
-
-    $('#seonghoDetailBtn').click(async function () {
-      window.location.href = "./detail/seongho.html";
-    })
-
-    $('#sanghyeonDetailBtn').click(async function () {
-      window.location.href = "./detail/sanghyeon.html";
-    })
   </script>
 </head>
 
@@ -235,6 +222,31 @@
   <!-- footer -->
   <div id="footer" class="footer"></div>
 </body>
+
+<script>
+  $(document).ready(function () {
+    $('#yongjunDetailBtn').click(function () {
+      window.location.href = "./detail/yongjun.html";
+    });
+
+    $('#hyewonDetailBtn').click(function () {
+      window.location.href = "./detail/hyewon.html";
+    });
+
+    $('#yunheeDetailBtn').click(function () {
+      window.location.href = "./detail/yunhee.html";
+    });
+
+    $('#seonghoDetailBtn').click(function () {
+      window.location.href = "./detail/seongho.html";
+    });
+
+    $('#sanghyeonDetailBtn').click(function () {
+      window.location.href = "./detail/sanghyeon.html";
+    });
+  });
+</script>
+
 <script>
   const homeButton = document.getElementById("homeButton");
   const teamButton = document.getElementById("teamButton");
